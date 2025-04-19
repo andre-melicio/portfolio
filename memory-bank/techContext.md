@@ -1,20 +1,25 @@
-# Contexto Técnico – Sistema de Biblioteca
+## Contexto técnico
 
-**Linguagens e Frameworks:** 
-- Backend em **Python 3.11** usando Django para a interface web e casos de uso, com SQLAlchemy para acesso ao banco de dados.
-- Frontend web em **HTML/CSS/JS** (simples, uso interno apenas).
-- Banco de Dados **PostgreSQL** hospedado localmente.
+### Linguagens & frameworks
+* **TypeScript** + **Next.js 14**  
+* **Tailwind CSS** (mobile‑first)  
+* Node 18 LTS para build; testes em **Jest** (≥ 80 % cobertura).  
+* ESLint + Prettier para estilo.
 
-**Configuração de Desenvolvimento:**
-- Sistema de versionamento **Git**; seguir modelo Git Flow para ramificações (main, develop, feature branches).
-- Ambiente virtual Python (`venv`) para dependências. Arquivo `requirements.txt` lista libs necessárias.
-- Padronização de código conforme **PEP8** (Python) e ESLint (JS).
+### Hospedagem
+* **GitHub Pages** (padrão) ou Vercel/Netlify.  
+* CDN global incluso, SSL grátis, domínio customizado via CNAME.
 
-**Restrições e Considerações Técnicas:**
-- O sistema deve rodar em computadores modestos (limite de 4GB RAM, CPUs dual-core).
-- Deve funcionar offline (cache local de operações) e sincronizar dados quando online, devido a possíveis quedas de internet.
-- Compatibilidade com Windows e Linux. Testes automatizados devem ser executados em ambos OS.
+### Integrações externas
+| Serviço              | Uso                                           |
+|----------------------|-----------------------------------------------|
+| GitHub API REST      | Listar repositórios públicos.                 |
+| LinkedIn Posts API   | Buscar últimas publicações do perfil.         |
+| GitHub Actions       | Build, cache e deploy automáticos.            |
 
-**Dependências Externas:**
-- Biblioteca de envio de e-mails (para notificações de atraso): usar **SMTP** via smtplib (evitar serviços externos por restrição de privacidade).
-- Nenhum serviço em nuvem externo deve ser necessário para operação principal (exigência do cliente para funcionamento offline).
+### Requisitos não funcionais
+* **Desempenho**: TTFB < 200 ms (Brasil‑Sul); build ≤ 120 s.  
+* **Segurança**: `GITHUB_TOKEN` (`public_repo`) & `LINKEDIN_TOKEN` (`r_liteprofile r_ugc_posts`) armazenados como **Secrets**; nunca expostos ao front.  
+* **Confiabilidade**: 99,9 % uptime; e‑mail on‑failure.  
+* **Observabilidade**: logs de build + page‑view analytics (ex.: Plausible).  
+* **Manutenibilidade**: código tipado, lintado e testado; estrutura monorepo simples.

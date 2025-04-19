@@ -1,14 +1,11 @@
-# Contexto Ativo Atual
+## Foco de trabalho atual (abril 2025)
 
-Registra o foco atual do desenvolvimento, decisões recentes e próximos passos definidos pela equipe.
+* **Tarefa em andamento**: iniciar projeto.
+1. Criar repositório `portfolio‑lanepage`.  
+2. Rodar `npx create-next-app@latest` com TypeScript, ESLint, Tailwind.  
+3. Configurar libs de API (`@octokit/rest`, cliente LinkedIn).  
 
-## 🎯 Foco de Trabalho Atual:
-- Qual funcionalidade ou módulo está sendo desenvolvido agora.
-
-## 📝 Decisões Recentes:
-- Decisão recente 1:
-- Decisão recente 2:
-
-## 🛣️ Próximos Passos:
-- Próximo passo imediato:
-- Próximas funcionalidades planejadas:
+* Próximos passos
+4. Implementar `lib/github.ts` para `GET /users/{user}/repos?sort=pushed`.  
+5. Implementar `lib/linkedin.ts` com OAuth 2.0 (token de membro).  
+6. Criar página `app/page.tsx` que consome cache e renderiza cards.

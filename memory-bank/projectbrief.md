@@ -1,17 +1,28 @@
-# Visão Geral do Projeto – Sistema de Biblioteca
 
-Este documento define o escopo e os objetivos do projeto **Sistema de Biblioteca**, que visa gerenciar livros e empréstimos de forma eficiente.
+## Visão geral do projeto – Landing Page de Portfólio
 
-**Objetivo Principal:** Desenvolver um sistema que permita o cadastro de livros, registro de usuários e controle de empréstimos, facilitando o gerenciamento de uma biblioteca.
+**Objetivo principal**  
+Criar uma landing page pública que apresente, de forma automática e contínua:
 
-**Escopo do Projeto:**
-- Cadastro de livros com título, autor, gênero e quantidade em estoque.
-- Registro de usuários da biblioteca (leitores) e acompanhamento de seus empréstimos.
-- Emissão de relatórios de livros disponíveis, emprestados e atrasos.
+1. Repositórios públicos do GitHub (nome, descrição, estrelas, data do último commit).  
+2. Postagens recentes do LinkedIn (texto ou primeira linha, data, total de reações, link).  
+3. Site disponível 24 × 7 em domínio próprio ou `username.github.io`.
 
-**Requisitos de Alto Nível:**
-- Interface simples para bibliotecários cadastrarem livros e usuários.
-- Funcionalidade de realizar empréstimo e devolução registrando data e responsável.
-- Notificação de empréstimos vencidos (atrasados) para o administrador.
+### Escopo
 
-**Fonte de Verdade:** Este _project brief_ é a referência central para requisitos. Quaisquer mudanças significativas no escopo devem ser refletidas aqui.
+| Item                                           | Dentro | Fora |
+|------------------------------------------------|:------:|:----:|
+| Listagem dinâmica de repositórios GitHub       |  ✔     |      |
+| Importação até 10 posts do LinkedIn            |  ✔     |      |
+| Página única (SPA/SSG) + rota `/api/cache`     |  ✔     |      |
+| Automação de rebuilds (webhooks / cron)        |  ✔     |      |
+| Hospedagem em GitHub Pages / Vercel / Netlify  |  ✔     |      |
+| Deploy de apps independentes                   |        |  ✖   |
+| CMS completo / e‑commerce / pagamentos         |        |  ✖   |
+| Hosting on‑premise                             |        |  ✖   |
+
+### Requisitos de alto nível
+* SSG/ISR com Next.js 14.  
+* Build automático por push, webhook ou cron diário (04:00 UTC).  
+* Lighthouse ≥ 90 em Performance e Acessibilidade.  
+* Responsividade e suporte a tema claro/escuro.

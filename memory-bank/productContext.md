@@ -1,16 +1,16 @@
-# Contexto do Produto – Sistema de Biblioteca
+## Contexto de produto
 
-Este projeto foi concebido para **modernizar o gerenciamento de bibliotecas**. Atualmente, muitas bibliotecas utilizam processos manuais ou planilhas, o que resulta em erros e falta de visibilidade.
+**Problema**  
+Manter portfólio técnico e presença profissional atualizados manualmente é demorado e propenso a desatualização.
 
-**Problemas que o sistema resolve:**
-- Dificuldade em controlar empréstimos e devoluções manualmente.
-- Falta de alerta automático de livros com devolução atrasada.
-- Ausência de um catálogo atualizado disponível para consulta rápida.
+**Solução proposta**  
+Landing page que puxa dados **direto das fontes oficiais** (GitHub & LinkedIn), reconstruindo‑se sozinha a cada novo conteúdo.
 
-**Como deve funcionar:**
-O sistema fornecerá uma interface onde bibliotecários poderão cadastrar livros e usuários, e registrar empréstimos com alguns cliques. Usuários poderão consultar se um livro está disponível. 
+**Público‑alvo**  
+Recrutadores, colegas desenvolvedores e potenciais clientes interessados no trabalho e nas ideias compartilhadas pelo autor.
 
-**Metas de Experiência do Usuário:**
-- Interface intuitiva e em português, para uso sem necessidade de treinamento técnico.
-- Opera tanto em rede local quanto offline (sincronizando dados quando possível).
-- Tempos de resposta rápidos ao buscar livros ou usuários.
+**Metas de experiência**  
+* Consulta rápida em desktop e mobile.  
+* Zero formulários de login (conteúdo público).  
+* Carregamento inicial < 2 s no Brasil‑Sul.  
+* Tema escuro automático se o visitante preferir.
